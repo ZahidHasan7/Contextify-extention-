@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Contextify",
+  "version": "1.0",
+  "description": "Instantly get context and summaries for any highlighted text on a page.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["style.css"]
+    }
+  ],
+  "options_page": "options.html",
+  "action": {
+    "default_title": "Contextify Settings",
+    "default_popup": "options.html"
+  }
+}

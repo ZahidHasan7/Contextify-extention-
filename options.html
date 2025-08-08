@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contextify Settings</title>
+    <style>
+        body { font-family: sans-serif; padding: 10px; width: 300px; }
+        h1 { font-size: 1.2em; }
+        label { display: block; margin-top: 10px; }
+        input { width: 100%; padding: 5px; box-sizing: border-box; }
+        button { margin-top: 15px; padding: 8px 12px; }
+        #status { margin-top: 10px; color: green; }
+    </style>
+</head>
+<body>
+    <h1>Contextify Settings</h1>
+    
+    <!-- The label just tells the user what to do. -->
+    <label for="apiKey">Google Gemini API Key:</label> 
+    
+    <!-- This input box should be EMPTY in your code. -->
+    <!-- The user will paste their key here in the browser. -->
+    <input type="password" id="apiKey">
+
+    <button id="save">Save Key</button>
+    <div id="status"></div>
+    <script src="options.js"></script>
+</body>
+</html>
