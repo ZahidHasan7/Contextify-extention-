@@ -1,4 +1,4 @@
-// Saves options to chrome.storage
+ // Saves options to chrome.storage
 function save_options() {
   const apiKey = document.getElementById('apiKey').value;
   chrome.storage.sync.set({

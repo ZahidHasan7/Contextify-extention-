@@ -42,11 +42,15 @@ function showPopup(x, y) {
     document.body.appendChild(popup);
 }
 
+// NEW, IMPROVED FUNCTION
 function updatePopupContent(content) {
     if (popup) {
-        // Sanitize and format the content. Replace newlines with <br> for HTML display.
-        const formattedContent = content.replace(/\n/g, '<br>');
+        // Use the 'marked' library to convert Markdown to HTML
+        // The 'marked.parse' function does all the magic!
+        const formattedContent = marked.parse(content);
+        
         popup.innerHTML = `<div class="contextify-content">${formattedContent}</div>`;
+
         // Add a close button
         const closeButton = document.createElement('button');
         closeButton.id = 'contextify-close-btn';
